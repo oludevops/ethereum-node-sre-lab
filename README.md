@@ -55,6 +55,8 @@ docs/                         runbook, screenshots, log excerpts
 - HostCpuSaturated: load over 2x the CPU count for 10 minutes
 - DiskSpaceLow and DiskWillFillIn24h (predict_linear over 6h)
 
+![Grafana dashboard](docs/11-grafana-dashboard.png)
+
 ## What happened
 
 **Engine API timeouts.** About two hours in, Lighthouse fell 60+ slots behind and kept timing out calling Geth on 8551. I assumed disk I/O at first, but vmstat showed iowait at 1-3%. The CPU was the problem: run queue 16-23 on 6 cores, 3-8% idle, over half the time in the kernel. top showed kcompactd at 60% (proactive memory compaction), heavy softirq from P2P traffic, and a MongoDB and Grafana left running from an older lab.
@@ -71,6 +73,8 @@ Idle CPU went from 3-8% to 63-87% and kcompactd dropped off the list. Both setti
 **Alert that never fired.** Lag sat above 32 slots for a long time, but ConsensusHeadLagCritical never fired. Lighthouse's scrape success was only 78%. It was too busy to return metrics within Prometheus's 10s timeout, and every missed scrape reset the alert's 10-minute `for` window. I raised the Lighthouse scrape timeout to 14s and it improved to about 95%. The remaining misses are slow responses (slowest 14.67s, no restarts), not outages.
 
 **Failure drill.** I stopped Lighthouse on purpose. ScrapeTargetDown fired after about 2 minutes and the dashboard showed load and memory drop. After restarting at 16:04:37, Lighthouse resumed from its database but its metrics only came back at 16:12:14, so about 7.5 minutes to recover. It was then 135 slots behind with 4 peers and took a while to catch up. Two takeaways: restarts aren't cheap on this box, and "metrics are back" is not the same as "node is caught up". Also, while Lighthouse was down, the head lag stat kept showing its last value (36), which is why the target-down alert matters. Log: `docs/12-failure-drill.txt`.
+
+![Dashboard after Lighthouse recovered](docs/13-failure-drill-recovered.png)
 
 ## Running it
 
