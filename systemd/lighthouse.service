@@ -1,0 +1,18 @@
+[Unit]
+Description=Lighthouse beacon node (Hoodi)
+After=geth.service
+Wants=geth.service
+
+[Service]
+User=lighthouse
+ExecStart=/usr/local/bin/lighthouse bn --network hoodi \
+  --datadir /var/lib/lighthouse \
+  --execution-endpoint http://127.0.0.1:8551 \
+  --execution-jwt /var/lib/jwt/jwt.hex \
+  --checkpoint-sync-url https://checkpoint-sync.hoodi.ethpandaops.io \
+  --http --http-address 127.0.0.1 \
+  --metrics --metrics-address 127.0.0.1
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

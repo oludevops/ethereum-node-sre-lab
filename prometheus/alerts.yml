@@ -1,0 +1,65 @@
+groups:
+  - name: ethereum-node
+    rules:
+      - alert: ScrapeTargetDown
+        expr: up == 0
+        for: 2m
+        labels: { severity: critical }
+        annotations:
+          summary: "{{ $labels.job }} metrics endpoint is down"
+
+      - alert: ConsensusHeadLagging
+        expr: (slotclock_present_slot - beacon_head_state_slot) > 8
+        for: 5m
+        labels: { severity: warning }
+        annotations:
+          summary: "Lighthouse head is {{ $value }} slots behind the network clock"
+
+      - alert: ConsensusHeadLagCritical
+        expr: (slotclock_present_slot - beacon_head_state_slot) > 32
+        for: 10m
+        labels: { severity: critical }
+        annotations:
+          summary: "Lighthouse more than one epoch behind ({{ $value }} slots)"
+
+      - alert: ExecutionHeadStalled
+        expr: chain_head_block > 0 and increase(chain_head_block[5m]) == 0
+        for: 2m
+        labels: { severity: critical }
+        annotations:
+          summary: "Geth head has not advanced in 5 minutes"
+
+      - alert: LowConsensusPeers
+        expr: libp2p_peers < 10
+        for: 10m
+        labels: { severity: warning }
+        annotations:
+          summary: "Lighthouse has only {{ $value }} peers"
+
+      - alert: LowExecutionPeers
+        expr: p2p_peers < 5
+        for: 10m
+        labels: { severity: warning }
+        annotations:
+          summary: "Geth has only {{ $value }} peers"
+
+      - alert: HostCpuSaturated
+        expr: node_load1 / count without (cpu, mode) (node_cpu_seconds_total{mode="idle"}) > 2
+        for: 10m
+        labels: { severity: warning }
+        annotations:
+          summary: "Load is {{ $value | printf \"%.1f\" }}x the CPU count"
+
+      - alert: DiskSpaceLow
+        expr: node_filesystem_avail_bytes{mountpoint="/"} / node_filesystem_size_bytes{mountpoint="/"} < 0.15
+        for: 10m
+        labels: { severity: critical }
+        annotations:
+          summary: "Less than 15% disk space left on /"
+
+      - alert: DiskWillFillIn24h
+        expr: predict_linear(node_filesystem_avail_bytes{mountpoint="/"}[6h], 24 * 3600) < 0
+        for: 30m
+        labels: { severity: warning }
+        annotations:
+          summary: "At the current growth rate, / will be full within 24 hours"

@@ -1,0 +1,16 @@
+[Unit]
+Description=Geth execution client (Hoodi)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=geth
+ExecStart=/usr/local/bin/geth --hoodi --datadir /var/lib/geth \
+  --http --http.addr 127.0.0.1 --http.api eth,net,web3 \
+  --authrpc.addr 127.0.0.1 --authrpc.jwtsecret /var/lib/jwt/jwt.hex \
+  --metrics --metrics.addr 127.0.0.1 --metrics.port 6060
+Restart=on-failure
+TimeoutStopSec=600
+
+[Install]
+WantedBy=multi-user.target

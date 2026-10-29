@@ -1,0 +1,20 @@
+top - 14:03:02 up  3:12,  3 users,  load average: 14.84, 14.68, 16.31
+Tasks: 271 total,   2 running, 269 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 20.7 us, 29.3 sy,  0.0 ni, 23.2 id,  1.2 wa,  0.0 hi, 25.6 si,  0.0 st 
+MiB Mem :  15478.7 total,    234.5 free,   8900.4 used,   6740.6 buff/cache     
+MiB Swap:   3914.0 total,   3913.1 free,      0.9 used.   6578.3 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+   4988 geth      20   0 5581960   2.6g  48424 S 150.6  17.1 275:33.50 geth
+   4989 lightho+  20   0   13.3g   4.1g 185544 S 134.8  27.2 291:57.06 lightho+
+     14 root      20   0       0      0      0 R  66.3   0.0  58:50.65 ksoftir+
+   8388 472       20   0 1817380 352816 199592 S  44.9   2.2  13:20.23 grafana
+   1565 mongodb   20   0 2746732 220252  81192 S  22.5   1.4  17:40.37 mongod
+   8381 nobody    20   0 1494684 115648  63056 S  20.2   0.7   4:26.49 prometh+
+   2441 grafana   20   0 1787972 253440 174028 S  19.1   1.6  14:09.19 grafana
+   9581 olusucc+  20   0   14120   6224   4056 R  16.9   0.0   0:00.66 top
+   3659 olusucc+  20   0 5650808 280080 109788 S  10.1   1.8  10:13.83 claude
+   1550 root      20   0  387396  10376   9224 S   6.7   0.1   0:00.89 gdm3
+      1 root      20   0   26212  17072  11048 S   2.2   0.1   0:16.78 systemd
+   1676 mysql     20   0  969208 540720  46184 S   2.2   3.4   9:04.38 mysqld
+   9285 root      20   0       0      0      0 I   2.2   0.0   0:13.15 kworker+

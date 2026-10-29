@@ -1,0 +1,21 @@
+=== Lighthouse ===
+Oct 29 13:46:09 atunse lighthouse[4989]: Oct 29 13:46:09.577 INFO  Syncing                                       peers: "8", distance: "51 slots (10 mins)", speed: "0.08 slots/sec", est_time: "11 mins"
+Oct 29 13:46:15 atunse lighthouse[4989]: Oct 29 13:46:15.860 ERROR Error during execution engine upcheck         error: HttpClient(url: http://127.0.0.1:8551/, kind: timeout, detail: operation timed out)
+Oct 29 13:46:21 atunse lighthouse[4989]: Oct 29 13:46:21.012 INFO  Syncing                                       peers: "9", distance: "50 slots (10 mins)", speed: "0.12 slots/sec", est_time: "6 mins"
+Oct 29 13:46:33 atunse lighthouse[4989]: Oct 29 13:46:33.712 INFO  Syncing                                       peers: "8", distance: "51 slots (10 mins)", speed: "0.09 slots/sec", est_time: "9 mins"
+Oct 29 13:46:35 atunse lighthouse[4989]: Oct 29 13:46:35.382 WARN  State advance routine overloaded              msg: "system resources may be overloaded"
+Oct 29 13:46:37 atunse lighthouse[4989]: Oct 29 13:46:37.703 WARN  State advance too slow                        head_block_root: 0xb2d7afb35a58d707ed107def5509174fafaeb1e1d41781acf205b1cfd96716b0, advanced_slot: 4256832, current_slot: 4256883, starting_slot: 4256881, msg: "system resources may be overloaded"
+Oct 29 13:46:42 atunse lighthouse[4989]: Oct 29 13:46:42.356 INFO  Syncing                                       peers: "6", distance: "52 slots (10 mins)", speed: "0.06 slots/sec", est_time: "14 mins"
+Oct 29 13:46:46 atunse lighthouse[4989]: Oct 29 13:46:46.124 WARN  State advance routine overloaded              msg: "system resources may be overloaded"
+
+=== Geth ===
+Oct 29 13:46:35 atunse geth[4988]: INFO [10-29|13:46:35.339] Syncing: state download in progress      synced=8.48%  state=6.54GiB   accounts=5,511,956@885.80MiB slots=24,686,946@5.28GiB   codes=446,606@405.28MiB eta=20h36m35.996s
+Oct 29 13:46:35 atunse geth[4988]: ERROR[10-29|13:46:35.699] Pending request exists for joining peer  peer=d617895f
+Oct 29 13:46:35 atunse geth[4988]: ERROR[10-29|13:46:35.816] Pending request exists for joining peer  peer=d617895f
+Oct 29 13:46:38 atunse geth[4988]: INFO [10-29|13:46:38.971] Syncing: chain download in progress      synced=33.70% chain=9.13GiB    headers=1,318,262@636.01MiB bodies=1,318,262@6.61GiB  receipts=1,318,262@1.89GiB    inflight=6+6   idle=0+0   throttled=0   eta=3h45m43.974s
+Oct 29 13:46:41 atunse geth[4988]: WARN [10-29|13:46:41.096] Unexpected storage ranges packet         peer=de5168b6 reqid=6,998,066,298,160,369,691
+Oct 29 13:46:41 atunse geth[4988]: WARN [10-29|13:46:41.285] Unexpected bytecode packet               peer=de5168b6 reqid=1,875,689,366,729,911,887
+Oct 29 13:46:45 atunse geth[4988]: INFO [10-29|13:46:45.482] Syncing: state download in progress      synced=8.48%  state=6.54GiB   accounts=5,511,956@885.80MiB slots=24,686,946@5.28GiB   codes=446,692@405.35MiB eta=20h39m12.391s
+Oct 29 13:46:45 atunse geth[4988]: WARN [10-29|13:46:45.714] Unexpected bytecode packet               peer=903a2b76 reqid=1,650,985,499,340,938,490
+Oct 29 13:46:45 atunse geth[4988]: WARN [10-29|13:46:45.855] Unexpected storage ranges packet         peer=903a2b76 reqid=3,437,497,133,266,986,054
+Oct 29 13:46:48 atunse geth[4988]: INFO [10-29|13:46:48.784] Syncing: chain download in progress      synced=33.71% chain=9.14GiB    headers=1,318,813@636.34MiB bodies=1,318,813@6.62GiB  receipts=1,318,813@1.90GiB    inflight=6+6   idle=0+0   throttled=0   eta=3h45m54.730s

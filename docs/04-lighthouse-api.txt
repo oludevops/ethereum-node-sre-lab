@@ -1,0 +1,4 @@
+Sync status:
+{"data":{"is_syncing":true,"is_optimistic":true,"el_offline":false,"head_slot":"4256575","sync_distance":"53"}}
+Peer count:
+{"data":{"connected":"9","connecting":"0","disconnected":"403","disconnecting":"0"}}

@@ -1,0 +1,42 @@
+== Failure drill: stop Lighthouse, 2026-10-29T15:52:26-04:00 ==
+2026-10-29T15:52:41-04:00 lighthouse stopped
+--- alerts after 3 minutes ---
+ScrapeTargetDown           firing
+ConsensusHeadLagging       inactive
+ConsensusHeadLagCritical   inactive
+ExecutionHeadStalled       inactive
+LowConsensusPeers          inactive
+LowExecutionPeers          inactive
+HostCpuSaturated           inactive
+DiskSpaceLow               inactive
+DiskWillFillIn24h          inactive
+--- geth reaction ---
+Oct 29 15:54:20 atunse geth[4988]: WARN [10-29|15:54:20.870] Beacon client online, but no consensus updates received in a while. Please fix your beacon client to follow the chain!
+2026-10-29T16:04:37-04:00 lighthouse started
+--- alerts after recovery ---
+ScrapeTargetDown           firing
+ConsensusHeadLagging       inactive
+ConsensusHeadLagCritical   inactive
+ExecutionHeadStalled       inactive
+LowConsensusPeers          inactive
+LowExecutionPeers          inactive
+HostCpuSaturated           inactive
+DiskSpaceLow               inactive
+DiskWillFillIn24h          inactive
+Oct 29 16:05:22 atunse lighthouse[16365]: Oct 29 16:05:22.039 INFO  Refusing to checkpoint sync                   msg: "database already exists, use --purge-db to force checkpoint sync"
+Oct 29 16:05:22 atunse lighthouse[16365]: Oct 29 16:05:22.053 INFO  Starting beacon chain                         method: "resume"
+Oct 29 16:05:31 atunse lighthouse[16365]: Oct 29 16:05:30.997 WARN  State cache missed                            state_root: 0x10eb93404a2947cc321ce92707e449c483f49546778a9da3e4a0a16b45d69bc4
+2026-10-29T16:12:14-04:00 lighthouse metrics endpoint back
+--- alerts after metrics returned ---
+ScrapeTargetDown           inactive
+ConsensusHeadLagging       pending
+ConsensusHeadLagCritical   pending
+ExecutionHeadStalled       inactive
+LowConsensusPeers          pending
+LowExecutionPeers          inactive
+HostCpuSaturated           pending
+DiskSpaceLow               inactive
+DiskWillFillIn24h          inactive
+Oct 29 16:12:57 atunse lighthouse[16365]: Oct 29 16:12:57.951 INFO  Sync state updated                            old_state: Syncing Finalized Chain, new_state: Stalled
+Oct 29 16:13:01 atunse lighthouse[16365]: Oct 29 16:13:01.403 INFO  Sync state updated                            old_state: Stalled, new_state: Syncing Finalized Chain
+Oct 29 16:13:06 atunse lighthouse[16365]: Oct 29 16:13:06.214 INFO  Syncing                                       peers: "4", distance: "135 slots (27 mins)", est_time: "--"

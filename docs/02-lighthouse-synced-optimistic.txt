@@ -1,0 +1,6 @@
+Oct 29 12:55:27 atunse lighthouse[4989]: Oct 29 12:55:27.939 CRIT  Failed to update execution head               error: ExecutionForkChoiceUpdateFailed(EngineError(Api { error: HttpClient(url: http://127.0.0.1:8551/, kind: timeout, detail: operation timed out) }))
+Oct 29 12:55:30 atunse lighthouse[4989]: Oct 29 12:55:30.201 INFO  Syncing                                       peers: "9", distance: "52 slots (10 mins)", speed: "0.26 slots/sec", est_time: "3 mins"
+Oct 29 12:55:33 atunse lighthouse[4989]: Oct 29 12:55:33.074 WARN  State advance routine overloaded              msg: "system resources may be overloaded"
+Oct 29 12:55:37 atunse lighthouse[4989]: Oct 29 12:55:37.601 WARN  Execution engine call failed                  error: HttpClient(url: http://127.0.0.1:8551/, kind: timeout, detail: operation timed out)
+Oct 29 12:55:37 atunse lighthouse[4989]: Oct 29 12:55:37.602 WARN  Error whilst processing payload status        error: Api { error: HttpClient(url: http://127.0.0.1:8551/, kind: timeout, detail: operation timed out) }
+Oct 29 12:55:37 atunse lighthouse[4989]: Oct 29 12:55:37.616 CRIT  Failed to update execution head               error: ExecutionForkChoiceUpdateFailed(EngineError(Api { error: HttpClient(url: http://127.0.0.1:8551/, kind: timeout, detail: operation timed out) }))

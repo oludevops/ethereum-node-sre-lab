@@ -1,0 +1,14 @@
+Thu Oct 29 13:59:05 EDT 2026
+--- vmstat 5 4 ---
+procs -----------memory---------- ---swap-- -----io---- -system-- -------cpu-------
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st gu
+14  0    924 1306720 243012 6163996    0    0   576  5416 2700    5 17 30 52  1  0  0
+20  0    924 1364368 243016 6165260    0    0    59   406 3072 1987 24 70  5  0  0  0
+21  0    924 1366576 243020 6166612    0    0   236   201 3190 2108 26 68  5  1  0  0
+28  0    924 1250792 243076 6169252    0    0   160   613 3065 1932 33 61  5  1  0  0
+--- uptime ---
+ 13:59:20 up  3:08,  3 users,  load average: 12.45, 14.95, 16.84
+--- free -h ---
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       8.2Gi       1.2Gi        69Mi       6.1Gi       6.9Gi
+Swap:          3.8Gi       924Ki       3.8Gi

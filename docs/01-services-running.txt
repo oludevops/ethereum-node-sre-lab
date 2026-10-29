@@ -1,0 +1,21 @@
+● geth.service - Geth execution client (Hoodi)
+     Loaded: loaded (/etc/systemd/system/geth.service; enabled; preset: enabled)
+     Active: active (running) since Thu 2026-10-29 11:41:41 EDT; 1h 13min ago
+ Invocation: 282cf6cf82704358b99b06b78e650b40
+   Main PID: 4988 (geth)
+      Tasks: 22 (limit: 18519)
+     Memory: 5.6G (peak: 7.6G)
+        CPU: 2h 47min 24.482s
+     CGroup: /system.slice/geth.service
+             └─4988 /usr/local/bin/geth --hoodi --datadir /var/lib/geth --http --http.addr 127.0.0.1 --http.api eth,net,web3 --authrpc.addr 127.0.0.1 --authrpc.jwtsecret /var/lib/jwt/jwt.hex --metrics --metrics.addr 127.0.0.1 --metrics.port 6060
+
+● lighthouse.service - Lighthouse beacon node (Hoodi)
+     Loaded: loaded (/etc/systemd/system/lighthouse.service; enabled; preset: enabled)
+     Active: active (running) since Thu 2026-10-29 11:41:41 EDT; 1h 13min ago
+ Invocation: 4fabba6bcd534705ae2cb05173161e89
+   Main PID: 4989 (lighthouse)
+      Tasks: 44 (limit: 18519)
+     Memory: 4.6G (peak: 5.6G)
+        CPU: 2h 42min 24.107s
+     CGroup: /system.slice/lighthouse.service
+             └─4989 /usr/local/bin/lighthouse bn --network hoodi --datadir /var/lib/lighthouse --execution-endpoint http://127.0.0.1:8551 --execution-jwt /var/lib/jwt/jwt.hex --checkpoint-sync-url https://checkpoint-sync.hoodi.ethpandaops.io --http --http-address 127.0.0.1 --metrics --metrics-address 127.0.0.1

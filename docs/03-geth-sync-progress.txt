@@ -1,0 +1,8 @@
+Oct 29 12:55:05 atunse geth[4988]: INFO [10-29|12:55:05.025] Syncing: chain download in progress      synced=29.10% chain=6.45GiB    headers=1,138,101@528.61MiB bodies=1,138,101@4.74GiB  receipts=1,138,101@1.19GiB    inflight=6+7   idle=0+0   throttled=0   eta=2h33m57.039s
+Oct 29 12:55:06 atunse geth[4988]: WARN [10-29|12:55:06.069] Unexpected bytecode packet               peer=d60f63f3 reqid=448,912,551,271,080,296
+Oct 29 12:55:06 atunse geth[4988]: WARN [10-29|12:55:06.172] Unexpected bytecode packet               peer=903a2b76 reqid=2,911,194,355,323,430,490
+Oct 29 12:55:07 atunse geth[4988]: WARN [10-29|12:55:07.682] Fetching the unknown forkchoice head from network hash=294d51..57a044
+Oct 29 12:55:17 atunse geth[4988]: INFO [10-29|12:55:17.227] Syncing: state download in progress      synced=8.19%  state=6.24GiB   accounts=4,671,548@855.11MiB slots=23,489,219@5.03GiB   codes=424,676@385.55MiB eta=11h49m48.266s
+Oct 29 12:55:17 atunse geth[4988]: WARN [10-29|12:55:17.233] Unexpected bytecode packet               peer=1ffeb2ce reqid=2,714,612,228,639,588,293
+Oct 29 12:55:29 atunse geth[4988]: INFO [10-29|12:55:29.339] Syncing: state download in progress      synced=8.19%  state=6.24GiB   accounts=4,671,548@855.11MiB slots=23,490,817@5.03GiB   codes=424,684@385.55MiB eta=11h52m22.379s
+Oct 29 12:55:37 atunse geth[4988]: INFO [10-29|12:55:37.345] Syncing: state download in progress      synced=8.19%  state=6.24GiB   accounts=4,671,548@855.11MiB slots=23,490,817@5.03GiB   codes=424,684@385.55MiB eta=11h53m36.196s

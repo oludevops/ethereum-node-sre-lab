@@ -1,0 +1,18 @@
+Thu Oct 29 14:10:47 EDT 2026
+procs -----------memory---------- ---swap-- -----io---- -system-- -------cpu-------
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st gu
+17  0    924 1118368 249540 5842380    0    0   699  5506 2755    6 17 31 50  1  0  0
+18  1    924 1138084 249544 5843764    0    0   193   295 3125 2399 34 55 11  1  0  0
+23  0    924 1149024 249572 5853500    0    0   222   846 2902 2195 33 53 13  1  0  0
+top - 14:10:57 up  3:20,  3 users,  load average: 18.59, 15.34, 15.90
+Tasks: 272 total,   1 running, 271 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 40.4 us, 31.6 sy,  0.0 ni,  7.0 id,  0.0 wa,  0.0 hi, 21.1 si,  0.0 st 
+MiB Mem :  15478.7 total,   1118.8 free,   8794.6 used,   5962.1 buff/cache     
+MiB Swap:   3914.0 total,   3913.1 free,      0.9 used.   6684.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+   4989 lightho+  20   0   13.5g   4.3g 182660 S 172.0  28.4 308:20.28 lightho+
+   4988 geth      20   0 5584008   2.5g  48424 S 120.0  16.4 289:34.81 geth
+     14 root      20   0       0      0      0 S  44.0   0.0  62:01.83 ksoftir+
+   8236 root      20   0       0      0      0 I  12.0   0.0   0:03.42 kworker+
+   8381 nobody    20   0 1494684 115280  63052 S  12.0   0.7   5:14.42 prometh+
